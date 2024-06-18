@@ -27,3 +27,9 @@ test('parametried form page', async({page})=>{
     await datePickerPage.selectCommonDatePickerDateFromToday(5)
     await datePickerPage.selectDatePickerFromTodayWithRange(1, 10)
 })
+
+test.only('testing with argos ci', async({page})=>{
+    const navigateTo = new NavigationPage(page)
+    await navigateTo.moveToFormLayoutsPage()
+    await navigateTo.moveToDatepickerPage()
+})
