@@ -2,6 +2,7 @@ import test from "@playwright/test"
 import { NavigationPage } from "./page-object/navigationPage"
 
 test.beforeEach(async({page}) => {
+    test.setTimeout(10000);
     await page.goto('/')
 })
 
